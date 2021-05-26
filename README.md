@@ -54,6 +54,12 @@ drwxr-xr-x 1 root root   4096 May 26 10:26 ../
 
 The file `hello_bb.tos` has appeared in the current folder.
 
+Then set file owner to the host user in order to manipulate it.
+
+```bash
+root@7a8bd676bc16:/project# chown 1000:1000 hello_bb.tos
+```
+
 ## Running the TOS program with HATARI
 
 The emulator `hatari` must be installed on the host.
@@ -64,7 +70,7 @@ total 144
 drwxrwxr-x 2 robin robin   4096 mai   26 12:29 ./
 drwxrwxr-x 8 robin robin   4096 mars   5 10:26 ../
 -rw-rw-r-- 1 robin robin    117 févr.  5 11:09 hello_bb.c
--rwxr-xr-x 1 root  root  132675 mai   26 12:29 hello_bb.tos*
+-rwxr-xr-x 1 robin robin 132675 mai  26 12:29 hello_bb.tos*
 robin:~/dev/atari_c/helloworld $ hatari hello_bb.tos
 ```
 
